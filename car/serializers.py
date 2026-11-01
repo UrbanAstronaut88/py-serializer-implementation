@@ -2,7 +2,7 @@ from rest_framework import serializers
 
 
 class CarSerializer(serializers.Serializer):
-    id = serializers.IntegerField()
+    id = serializers.IntegerField(required=False)
     manufacturer = serializers.CharField(max_length=64)
     model = serializers.CharField(max_length=64)
     horse_powers = serializers.IntegerField(min_value=1, max_value=1914)
